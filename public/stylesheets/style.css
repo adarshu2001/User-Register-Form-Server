@@ -14,7 +14,6 @@ body {
 }
 
 .container {
-  /* max-width: 850px; */
   width: 60%;
   background: #fff;
   padding: 25px 30px;
@@ -25,6 +24,7 @@ body {
 .container .title {
   font-size: 16px;
   font-weight: 500;
+  margin: 20px 0;
 }
 
 .container form .user-details {
@@ -34,10 +34,8 @@ body {
 }
 
 form .user-details .input-box {
-  /* width: calc(100% / 2 -20px);   */
   width: 50%;
   padding: 20px 0;
-  /* margin: 10px 0 5px 0; */
 }
 
 .user-details .input-box .details {
@@ -69,7 +67,6 @@ form .user-details .input-box {
 .location-details .location {
   width: 100%;
   padding: 20px 0;
-  /* width: calc(100% / 2 -20px); */
 }
               
 .location-details .location .detail {
@@ -102,4 +99,35 @@ form .user-details .input-box {
   height: 38px;
   border: none;
   border-radius: 7px;
+}
+
+
+
+@media (max-width:799px) {
+  .container {
+    max-width: 100%;
+  }
+
+  
+.container .title {
+  margin: 10px 0;
+}
+
+  
+form .user-details .input-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.user-details .input-box input {
+  height: 35px;
+  width: 100%;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+}
+  
+  
 }
