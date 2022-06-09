@@ -5,7 +5,6 @@ var collection = require('../config/collection')
 module.exports = {
 
     userData:(data) => {
-        console.log( data );
         return new Promise(( resolve,reject ) => {
             let user = {
                 Fname: data.fname,
@@ -21,8 +20,9 @@ module.exports = {
             }
             db.get().collection(collection.USER_REGISTER_COLLECTION).insertOne(user).then((response)=> {
                 resolve(response)
+            }).catch((err) => {
+                reject('failed')
             })
-
         })
 
     }

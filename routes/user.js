@@ -10,6 +10,8 @@ router.get('/', function(req, res, next) {
 router.post('/register-form',(req,res) => {
   userHelpers.userData(req.body).then((resp) => {
     res.redirect('/')
+  }).catch((err) =>{
+    console.log(err);
   })
 })
 

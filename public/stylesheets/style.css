@@ -101,6 +101,10 @@ form .user-details .input-box {
   border-radius: 7px;
 }
 
+.button button:hover {
+  cursor: pointer;
+}
+
 
 
 @media (max-width:799px) {
